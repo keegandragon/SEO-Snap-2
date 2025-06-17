@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host 0.0.0.0 --port 5173 --root project",
+    "dev": "cd project && vite --host 0.0.0.0 --port 5173",
     "build": "cd project && tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview --host 0.0.0.0 --port 4173 --root project",
+    "preview": "cd project && vite preview --host 0.0.0.0 --port 4173",
     "serve": "npx serve project/dist -l 3000"
   },
   "dependencies": {
