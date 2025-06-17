@@ -6,7 +6,16 @@ export default defineConfig({
   plugins: [react()],
   server: {
     host: true,
-    port: 3000,
-    strictPort: false
+    port: 5173,
+    hmr: {
+      overlay: false
+    }
+  },
+  define: {
+    global: 'globalThis',
+    process: { env: {} }
+  },
+  optimizeDeps: {
+    exclude: ['fsevents']
   }
 })
