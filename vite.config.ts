@@ -8,17 +8,7 @@ export default defineConfig({
     host: '0.0.0.0',
     port: 5173,
     strictPort: false,
-    open: false,
-    cors: true,
-    hmr: {
-      port: 5174,
-      host: 'localhost'
-    }
-  },
-  preview: {
-    host: '0.0.0.0',
-    port: 4173,
-    strictPort: false
+    open: false
   },
   define: {
     global: 'globalThis',
