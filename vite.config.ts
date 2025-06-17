@@ -5,15 +5,17 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   server: {
-    host: true,
+    host: '0.0.0.0', // Listen on all interfaces
     port: 5173,
+    strictPort: true, // Fail if port is already in use
     hmr: {
-      overlay: false
+      port: 5173,
+      host: 'localhost'
     }
   },
   define: {
     global: 'globalThis',
-    process: { env: {} }
+    'process.env': {}
   },
   optimizeDeps: {
     exclude: ['fsevents']
